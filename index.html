@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>맛있는 소리 찾기</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<style type="text/css">
+		#green{margin-left: -10px;}
+		body {
+			margin: 0; 
+			display: flex; 
+			flex-direction: column; /* 세로 방향으로 쌓이도록 설정 */
+			height: 100vh;
+			background-image: url(fabric.png);
+			background-size: cover;
+			align-items: center;
+		}
+
+		.shiftani {
+			width: 100vw; 
+			height: 45vh; /* 각 이미지의 높이 설정 */
+			background: url(cutlery.png);
+			background-size: 3vw;
+			animation: shiftX 35s infinite linear;
+		}
+
+		@keyframes shiftX {
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 100% 0;
+			}
+		}
+
+		.spacing {
+			height: 650%;
+			display: flex;
+			align-items: center;
+		}
+
+		.spacing img {
+			max-width: 350px;
+			max-height: 350px;
+			margin: 50px;
+			margin-top: -100px;
+		}
+
+       
+      
+        h1 {
+            color: black;
+            font-size: 30px;
+            margin-top: 120px;
+            font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;}
+
+
+	</style>
+
+
+
+</head>
+<body>
+	<div class="shiftani"></div> <!-- 상단 -->
+	<section>
+<h1>맛있는 소리 찾기</h1>
+</section>
+
+	<div class="spacing"> <!-- 여백 -->
+	    <img src="green.png" id="green">
+	    <audio id="crunch" src="celery.mp3"></audio>
+	    <audio id="soup" src="boiling.wav"></audio>
+	    <audio id="meat" src="grill.wav"></audio>
+	    <script type="text/javascript">
+
+		var state = false;
+
+		green.onclick = function(){
+			if(!state){
+				green.src = "celery.png"
+				state = true;
+				crunch.play();
+			}else{
+				green.src = "green.png"
+				state = false;
+				crunch.pause();
+			}
+		}
+	</script>
+
+	    <img src="orange.png" id="orange">
+	    <script type="text/javascript">
+
+		var state = false;
+
+		orange.onclick = function(){
+			if(!state){
+				orange.src = "jjigae.png"
+				state = true;
+				soup.play();
+			}else{
+				orange.src = "orange.png"
+				state = false;
+				soup.pause();
+			}
+		}
+	</script>
+
+	    <img src="pink.png" id="pink">
+	    <script type="text/javascript">
+
+		var state = false;
+
+		pink.onclick = function(){
+			if(!state){
+				pink.src = "steak.png"
+				state = true;
+				meat.play();
+			}else{
+				pink.src = "pink.png"
+				state = false;
+				meat.pause();
+			}
+		}
+	</script>
+	    </div>
+	<div class="shiftani"></div> <!-- 하단 -->
+
+
+</script>
+</body>
+</html>
